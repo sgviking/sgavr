@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/bin/bash
 
 # Compile instructions for ATTiny45
 avr-gcc -mmcu=attiny45 -DF_CPU=1234567Lu shiftled.c -o shiftled.o
