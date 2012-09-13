@@ -37,20 +37,19 @@ int main()
 
     // Request delay from LDR on pin PC0.
     // and compute delay duration.
-    //    delay = read_ADC(PC0) << 8;
+    delay = read_ADC(PC0) << 8;
 
     // Turn LED ON.
     PORTB |= _BV(PB0);
 
     // Wait for computed delay time.
-    //_delay_loop_2(delay);
-    _delay_ms(200);
+    _delay_loop_2(delay);
+    
     // Turn LED OFF.
     PORTB &= ~_BV(PB0);
 
     // Wait for computed delay time.
-    //_delay_loop_2(delay);
-    _delay_ms(200);
+    _delay_loop_2(delay);
   }
 
   return 0;    
