@@ -10,7 +10,7 @@ BIN = Count
 
 # Build Targets
 PARTN = atmega328p
-CLOCK = 1000000Lu
+CLOCK = 16000000Lu
 
 # Comiler settings
 CC = avr-gcc
@@ -45,7 +45,7 @@ clean :
 	$(RM) $(BIN)_$(PARTN).elf $(BIN)_$(PARTN).hex $(OBJ)
 
 install : $(BIN)_$(PARTN).hex
-	@echo "avrdude $(AVRFLAGS) -p $(PARTN) -U flash:w:$(BIN)_$(PARTN).hex:i"
+	avrdude $(AVRFLAGS) -p $(PARTN) -U flash:w:$(BIN)_$(PARTN).hex:i
 
 wfuse_m328p :
 	@echo "avrdude $(AVRFLAGS) -p m328p -U lfuse:w:0x62:m -U hfuse:w:0xd9:m"

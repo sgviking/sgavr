@@ -14,9 +14,9 @@
  * define it here.
  */
 
-// Define for 1MHz clock cycle.
+// Define for 16MHz clock cycle.
 #ifndef F_CPU
-#define F_CPU 1000000UL
+#define F_CPU 16000000UL
 #endif
 
 // Utilties for configuring interrupts.
